@@ -1,12 +1,13 @@
 import React from 'react'
-import Nav from './components/nav'
+import Header from './components/Header'
+import Section from './components/Section'
 function App() {
 
 
   return (
     <>
-      <Nav />
-      <h1>youtube</h1>
+      <Header />
+      <Section />
     </>
   )
 }

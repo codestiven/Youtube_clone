@@ -1,10 +1,10 @@
 // En tu archivo principal (e.g., components/index.js)
-import logo_text from "./logo_text.svg";
-import menu from "./Menu.svg";
-import add_video from "./anadir-video.svg";
-import campana from "./campana.svg";
-import seach from "./search.svg";
-import micro from "./microphone.svg";
+import logo_text from "./SVG/logot.svg";
+import menu from "./SVG/menu.svg";
+import add_video from "./SVG/graba.svg";
+import campana from "./SVG/campanita.svg";
+import seach from "./SVG/lupa.svg";
+import micro from "./SVG/microphone.svg";
 
 
 export default {
