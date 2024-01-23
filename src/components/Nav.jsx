@@ -81,13 +81,17 @@ export default function Nav() {
         <Search />
 
         <Micro>
-          <Icon img={Assets.Micro} fondo={true}></Icon>
+          <Icon
+            img={Assets.Micro}
+            fondo={true}
+            texto="ealizar búsqueda con la voz"
+          ></Icon>
         </Micro>
       </Center>
 
       <End>
-        <Icon img={Assets.Add_video}></Icon>
-        <Icon img={Assets.Campana}></Icon>
+        <Icon img={Assets.Add_video} texto="Crear"></Icon>
+        <Icon img={Assets.Campana} texto="Notificaciones"></Icon>
         <User img="https://cdn-icons-png.flaticon.com/512/149/149071.png" />
       </End>
     </Navegacion>
