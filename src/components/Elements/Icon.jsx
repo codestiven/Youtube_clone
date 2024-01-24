@@ -12,15 +12,15 @@ const Flotante = styled.div`
   border-radius: 5px;
   font-size: 13px;
   background-color: #363636b7;
-
-  transition: opacity 500ms; /* Transición en la propiedad opacity */
+  text-align: center;
+  transition: opacity ms; /* Transición en la propiedad opacity */
   opacity: 0;
   display: ${(props) => (props.mostrar ? "block" : "none")};
 `;
 
 const Img = styled.img`
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   padding: 10px;
 `;
 
@@ -62,14 +62,16 @@ const Contenedor_hijo = styled(Contenedor)`
 export default function Icon(prompt) {
   const hovered = prompt.hover !== undefined ? prompt.hover : true;
   const fondo = prompt.fondo !== undefined ? prompt.fondo : false;
+  const desc = prompt.desc !== undefined ? prompt.desc : true;
 
   return (
     <Contenedor_hijo hover={hovered} fondo={fondo}>
       <Img src={prompt.img} alt="" />
-      <Flotante mostrar={hovered}>
-        {" "}
-        <p>{prompt.texto}</p>{" "}
-      </Flotante>
+      {desc && (
+        <Flotante mostrar={hovered}>
+          <p>{prompt.texto}</p>{" "}
+        </Flotante>
+      )}
     </Contenedor_hijo>
   );
 }

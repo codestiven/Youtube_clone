@@ -71,7 +71,7 @@ export default function Nav() {
     <Navegacion>
       <Start>
         <Contenedor>
-          <Icon img={Assets.Menu} />
+          <Icon img={Assets.Menu} desc ={false} />
         </Contenedor>
 
         <LogoT />
