@@ -5,7 +5,7 @@ import Contenedor from "../../styled-components/centralizar";
 
 const LogoObject = styled.object`
   width: 120px;
-  height: 36px;
+  padding: 18px 14px 18px 16px;
 `;
 
 export default function LogoT() {

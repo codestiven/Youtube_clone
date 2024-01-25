@@ -15,7 +15,7 @@ const Img = styled.img`
 
 
 
-export default function User(prompt) {
+export default function User_img(prompt) {
   return (
     <Contenedor>
       <Img src={prompt.img} alt="" />

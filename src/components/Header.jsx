@@ -3,7 +3,7 @@ import Assets from "../assets/Assets";
 import Icon from "./Elements/Icon";
 import LogoT from "./Elements/logoT";
 import styled , {css} from "styled-components";
-import User from "./Elements/user";
+import User_img from "./Elements/User";
 import Contenedor from "../styled-components/centralizar";
 import Search from "./Elements/Search";
 
@@ -71,7 +71,7 @@ export default function Nav() {
     <Navegacion>
       <Start>
         <Contenedor>
-          <Icon img={Assets.Menu} desc ={false} />
+          <Icon img={Assets.Menu} desc={false} />
         </Contenedor>
 
         <LogoT />
@@ -92,7 +92,7 @@ export default function Nav() {
       <End>
         <Icon img={Assets.Add_video} texto="Crear"></Icon>
         <Icon img={Assets.Campana} texto="Notificaciones"></Icon>
-        <User img="https://cdn-icons-png.flaticon.com/512/149/149071.png" />
+        <User_img img="https://cdn-icons-png.flaticon.com/512/149/149071.png" />
       </End>
     </Navegacion>
   );

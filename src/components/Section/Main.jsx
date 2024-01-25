@@ -1,44 +1,37 @@
 // import React from 'react'
 import styled from "styled-components";
 import Contenedor from "../../styled-components/centralizar";
+import Video_items from "../Elements/Video_items";
+import TabList_item from "../Elements/TabList_item";
 
 
-const Items = styled(Contenedor)`
-  display: flex;
-  flex-direction: row;
-  margin: 12px 12px 12px 0;
-  background-color: #e4e4e4;
-  padding: 0 7px;
-  border: none;
-  border-radius: 6px;
-
-  display: block;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  font-family: "Roboto", "Arial", sans-serif;
-  font-size: 15px;
-  line-height: 2rem;
-  font-weight: 520;
-
-  &:hover {
-    background-color: #d3d3d3;
-    cursor: pointer;
-  }
-`;
 
 const Index = styled.main`
-  background-color: red;
+  /* background-color: red; */
   width: 100%;
 `;
 
 const TabList = styled(Contenedor)`
   justify-content: flex-start;
-  background-color: green;
+  /* background-color: green; */
   width: 100%;
   display: flex;
   height: 56px;
-  padding: 0 30px;
+
+`;
+
+
+
+const Contenido = styled.div`
+  width: 100%;
+  height: 85vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 32px;
+  justify-content: space-between;
+  padding: 32px 0px;
+  overflow-y: scroll;
+  
 `;
 
 
@@ -50,12 +43,11 @@ const TabList = styled(Contenedor)`
 
 
 
-
-const TabList_item = (prompts) => {
-  return <Items> {prompts.text} </Items>;
-};
-
 export default function Main() {
+
+
+
+  
   return (
     <Index>
       <TabList>
@@ -64,6 +56,24 @@ export default function Main() {
         <TabList_item text="Principal" />
         <TabList_item text="Principal" />
       </TabList>
+      <Contenido>
+        <Video_items />
+        <Video_items />
+        <Video_items />
+        <Video_items />
+        <Video_items />
+        <Video_items />
+        <Video_items />
+        <Video_items />
+        <Video_items />
+        <Video_items />
+        <Video_items />
+        <Video_items />
+        <Video_items />
+        <Video_items />
+        <Video_items />
+        <Video_items />
+      </Contenido>
     </Index>
   );
 }
