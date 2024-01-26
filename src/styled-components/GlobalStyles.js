@@ -23,11 +23,25 @@ body {
     width: 100%;
     height: 100vh;
     padding: 1px;
-
+  scrollbar-width: thin; /* Para navegadores basados en Firefox */
+  overflow-y: scroll; 
 
 }
+
+
+
+
+/* Para navegadores basados en WebKit (como Chrome y Safari) */
+body::-webkit-scrollbar {
+  width: 0.5rem; /* Puedes ajustar el ancho según tus preferencias */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color de la barra de desplazamiento */
+}
+
+
   /* Otros estilos */
 `;
-
 
 export default GlobalStyles;
