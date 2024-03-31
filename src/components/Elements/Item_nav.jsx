@@ -1,9 +1,6 @@
-// import React from 'react'
-import styled from 'styled-components'
-import Icon from './Icon';
-
-
-
+import { useState , useEffect } from "react";
+import styled from "styled-components";
+import Icon from "./Icon";
 
 const Item = styled.div`
   width: 100%;
@@ -12,7 +9,7 @@ const Item = styled.div`
   display: flex;
   align-items: center;
   border-radius: 10px;
-  margin-bottom:1px ;
+  margin-bottom: 1px;
 
   & img {
     margin-right: 18px;
@@ -26,26 +23,26 @@ const Item = styled.div`
     color: #0f0f0f;
   }
 
+  ${(props) => props.isActive && `background-color: #eeeeee;`}
+
   &:hover {
     background-color: #eeeeee;
     cursor: pointer;
   }
 `;
 
+export default function Item_nav( prompt ) {
+  const [isActive, setIsActive] = useState(false);
 
+  // Update isActive state when prompt.activar changes
+  useEffect(() => {
+    setIsActive(prompt.activar);
+  }, [prompt.activar]);
 
-
-
-
-
-export default function Item_nav(prompt) {
   return (
-    <Item>
-        <Icon img={prompt.icono} hover={false}/>
-
-        
-
-        <p>{prompt.text}</p>
+    <Item isActive={isActive}>
+      <Icon img={prompt.icono} hover={false} />
+      <p>{prompt.text}</p>
     </Item>
-  )
+  );
 }

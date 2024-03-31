@@ -17,6 +17,7 @@ const TabList = styled(Contenedor)`
   width: 100%;
   display: flex;
   height: 56px;
+  padding-left:25px ;
 
 `;
 
@@ -26,12 +27,12 @@ const Contenido = styled.div`
   width: 100%;
   height: 85vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
   gap: 32px;
   justify-content: space-between;
   padding: 32px 0px;
   overflow-y: scroll;
-  
+  padding-left: 25px;
 `;
 
 
@@ -51,10 +52,12 @@ export default function Main() {
   return (
     <Index>
       <TabList>
+        <TabList_item text="Principal" activar={true} />
         <TabList_item text="Principal" />
         <TabList_item text="Principal" />
         <TabList_item text="Principal" />
-        <TabList_item text="Principal" />
+
+
       </TabList>
       <Contenido>
         <Video_items />
